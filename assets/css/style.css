@@ -4,8 +4,10 @@
 #header {
   width: 100%;
   height: 63px;
-  background: rgba(0, 0, 0, 0);
   border-bottom: 1px solid #c6c6c6;
+}
+#banner {
+  position: relative;
 }
 
 /* 가운데 영역 */
@@ -22,8 +24,6 @@
 }
 
 /* 헤더 영역 */
-.header {
-}
 .header h1 {
   float: left;
 }
@@ -61,4 +61,98 @@
   color: #444;
   font-size: 17px;
   font-weight: 700;
+}
+
+/* 배너 */
+.banner_menu {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 100px;
+}
+.banner_menu a {
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.banner_menu a:hover {
+  color: #c1c1c1;
+}
+.banner_menu .bm_left {
+  float: left;
+}
+.banner_menu .bm_left ul {
+  padding-top: 7px;
+}
+.banner_menu .bm_left ul li {
+  position: relative;
+  display: inline;
+  margin-right: 30px;
+}
+.banner_menu .bm_left ul li.total {
+  margin-right: 15px;
+}
+.banner_menu .bm_left ul li.total a {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.banner_menu .bm_left ul li.total a:hover {
+  color: #000;
+  background: #fff;
+  border-color: #000;
+}
+.banner_menu .bm_right {
+  overflow: hidden;
+  float: right;
+}
+.banner_menu .bm_right ul {
+  float: left;
+}
+.banner_menu .bm_right ul:first-child {
+  padding-top: 7px;
+}
+.banner_menu .bm_right ul li {
+  position: relative;
+  display: inline;
+  margin-right: 20px;
+  text-align: center;
+}
+.banner_menu .bm_right ul li.line {
+  margin-right: 30px;
+}
+.banner_menu .bm_right ul li.white {
+  margin-right: 10px;
+}
+.banner_menu .bm_right ul li.white a {
+  display: inline-block;
+  padding: 7px 30px 9px 30px;
+  width: 80px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #3a0e6a;
+}
+.banner_menu .bm_right ul li.purple {
+  margin-right: 0;
+}
+.banner_menu .bm_right ul li.purple a {
+  display: inline-block;
+  padding: 7px 30px 9px 30px;
+  width: 80px;
+  background-color: #3a0e6a;
+  border: 1px solid #6e40c4;
+  color: #fff;
+}
+.banner_menu li.line::after {
+  content: '';
+  position: absolute;
+  right: -18px;
+  top: 2px;
+  width: 1px;
+  height: 14px;
+  background: #fff;
 }
