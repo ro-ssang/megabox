@@ -9,6 +9,7 @@
 }
 #header {
   width: 100%;
+  background-color: #fff;
   border-bottom: 1px solid #c6c6c6;
 }
 #banner {
@@ -274,7 +275,6 @@
 }
 .movie_chart {
   overflow: hidden;
-  height: 592px;
 }
 .movie_chart > div > div > div {
   overflow: hidden;
@@ -283,7 +283,6 @@
   float: left;
   margin-right: 18px;
   width: 292px;
-  height: 592px;
 }
 .movie_chart > div > div > div:last-child {
   margin-right: 0;
@@ -362,7 +361,7 @@
 .movie_chart > div > div > div .info .info_btn a {
   float: left;
   margin-right: 2%;
-  padding: 15px;
+  padding: 15px 0;
   width: 49%;
   background: #f2f2f2;
   box-sizing: border-box;
@@ -441,9 +440,20 @@
     padding-top: 35px;
     font-size: 16px;
   }
+
+  .movie_title ul {
+    width: auto;
+  }
+  .movie_title li {
+    width: 25%;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 768px) {
+  body {
+    background: #d9d7e0;
+  }
   #mNav {
     right: 6px;
   }
@@ -455,6 +465,70 @@
   }
   .header h1 strong {
     display: none;
+  }
+
+  #movie .row {
+    background: #fff;
+    margin: 24px;
+    padding: 24px;
+  }
+  .movie {
+    padding: 0;
+  }
+  .movie .ir_so {
+    position: static;
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    text-indent: 0;
+  }
+  .movie {
+  }
+  .movie_title {
+    margin-bottom: 30px;
+  }
+  .movie_title ul {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .movie_title ul:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #e1e1e1;
+    z-index: 1;
+  }
+  .movie_title li {
+    width: auto;
+    border: 0;
+  }
+  .movie_title li a {
+    position: relative;
+    margin-right: 35px;
+    padding: 0;
+    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .movie_title li.active a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background: #666;
+    z-index: 2;
+  }
+  .movie_title li.active a {
+    background: none;
+    color: #666;
   }
 }
 
@@ -476,6 +550,7 @@
     color: #fff;
     font-size: 14px;
   }
+
   .slider {
     height: 400px;
   }
@@ -498,10 +573,100 @@
     width: 13px !important;
     height: 13px !important;
   }
+
+  #movie .container {
+    position: relative;
+  }
+  #movie .container:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: #d9d7e0;
+    z-index: 20;
+  }
+  #movie .row {
+    position: relative;
+    margin: 8px;
+    margin-right: 0;
+    padding: 16px;
+    padding-right: 0;
+  }
+  #movie .row:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 100%;
+    background: #fff;
+    z-index: 10;
+  }
+  #movie .ir_so {
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
+  .movie_title {
+    margin-bottom: 20px;
+  }
+  .movie_title ul {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    white-space: nowrap;
+  }
+  .movie_title li a {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+  .movie_title li.active a:before {
+    bottom: -8px;
+  }
+  .movie_chart {
+    position: relative;
+    z-index: 30;
+  }
+  .movie_chart > div > div > div .info {
+    padding: 5px;
+  }
+  .movie_chart > div > div > div .info h3 {
+    margin: 5px 0 10px;
+    text-align: center;
+  }
+  .movie_chart > div > div > div .info h3 strong {
+    display: block;
+    color: #222;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .movie_chart > div > div > div .info h3 span {
+    display: none;
+  }
+  .movie_chart > div > div > div .info .info_btn a {
+    display: block;
+    margin-left: 24%;
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 52%;
+    background: none;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #777;
+    font-size: 14px;
+  }
+  .movie_chart > div > div > div .info .info_btn a:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
 }
 
 @media (max-width: 320px) {
+  .movie_title li a {
+    margin-right: 9px;
+  }
 }
