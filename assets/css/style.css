@@ -20,6 +20,11 @@
 }
 #event {
 }
+#opening {
+  margin: 17px 0;
+  background: url(../img/bg01.jpg) no-repeat center top;
+  background-size: cover;
+}
 
 /* 가운데 영역 */
 .container {
@@ -377,7 +382,7 @@
   margin-right: 0;
 }
 
-/* 이벤트 영역 */
+/* 이벤트 */
 .event {
   overflow: hidden;
   padding: 100px 0;
@@ -407,6 +412,71 @@
 .event .event_right {
   float: left;
   width: 32%;
+}
+
+/* 오프닝 */
+.opening {
+  padding: 100px 0;
+  color: #bb9b51;
+  text-align: center;
+}
+.opening h2 {
+  margin-bottom: 15px;
+}
+.opening h2 .grand {
+  display: inline-block;
+  width: 330px;
+  height: 50px;
+  background-position: 0 -175px;
+}
+.opening .date {
+  display: inline-block;
+  width: 260px;
+  height: 45px;
+  background-position: 0 -225px;
+}
+.opening .desc {
+  padding-bottom: 20px;
+  background: url(../img/bar.png) no-repeat bottom center;
+  background-size: 100%;
+  font-size: 35px;
+  font-weight: 300;
+}
+.opening .open_box {
+  overflow: hidden;
+  padding: 20px 3% 0 3%;
+}
+.opening .open_box > div {
+  float: left;
+  margin: 4% 3% 0 3%;
+  width: 27.3333%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #3e4b44;
+  box-sizing: border-box;
+}
+.opening .open_box > div h3 {
+  display: inline-block;
+  margin-top: -24px;
+  padding: 10px 20px;
+  background: #551e9b;
+  border: 1px solid #6e3abb;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 300;
+}
+.opening .open_box > div p {
+  padding: 6% 0 10% 0;
+  color: #fff;
+  font-size: 23px;
+  font-weight: bold;
+}
+.opening .open_box > div p em {
+  display: block;
+  font-weight: bold;
+}
+.opening .open_box > div p strong {
+  display: block;
+  font-weight: bold;
 }
 
 /* 미디어쿼리 */
@@ -484,6 +554,17 @@
   .movie_title li {
     width: 25%;
     box-sizing: border-box;
+  }
+
+  .opening {
+    padding: 50px 0;
+  }
+  .opening .open_box {
+    display: none;
+  }
+  .opening .desc {
+    font-size: 25px;
+    background: none;
   }
 }
 
@@ -587,6 +668,10 @@
   }
   .event .event_right {
     display: none;
+  }
+
+  #opening {
+    margin: 0;
   }
 }
 
@@ -728,6 +813,30 @@
   .event h2 {
     margin-bottom: 10px;
     font-size: 18px;
+  }
+
+  #opening {
+    margin: 8px 0;
+  }
+  .opening {
+    padding: 20px 0;
+  }
+  .opening h2 {
+    margin-bottom: 10px;
+  }
+  .opening h2 .grand {
+    width: 197px;
+    height: 24px;
+    background-position: 0 -105px;
+    background-size: 300px;
+  }
+  .opening .date {
+    display: none;
+  }
+  .opening .desc {
+    padding-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
