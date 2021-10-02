@@ -1,5 +1,26 @@
 @charset "utf-8";
 
+/* 스킵 메뉴 */
+#skip {
+  position: relative;
+}
+#skip a {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 140px;
+  background: #333;
+  border: 1px solid #fff;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  z-index: 1;
+}
+#skip a:active,
+#skip a:focus {
+  top: 0;
+}
+
 /* 레이아웃 */
 #mNav {
   position: absolute;
@@ -699,9 +720,14 @@
   background: #999;
 }
 .notice ul li ul li dd {
-  overflow: hidden;
   padding-top: 3px;
   color: #777;
+}
+.notice ul li ul li dd a {
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  border: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
